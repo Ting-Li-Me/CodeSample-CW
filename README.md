@@ -16,9 +16,13 @@ Please see below
 7. Frontend is Angularjs, html and js files are located at:
  
    CodeSample-CW/CodeSample-CW/wwwroot/app.js
+   
    CodeSample-CW/CodeSample-CW/wwwroot/views/add.html
+   
    CodeSample-CW/CodeSample-CW/wwwroot/views/edit.html
+   
    CodeSample-CW/CodeSample-CW/wwwroot/views/products.html
+   
    
    
 Thank you for your time.
