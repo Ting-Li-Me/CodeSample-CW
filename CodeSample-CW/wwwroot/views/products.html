@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="loading" ng-if="doingWork">
+            <div class="spinner-border text-primary spinner" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+
+        <div class="col-sm-12">
+            <h3>All Products</h3>
+
+            <a class="btn btn-primary btn-add-new" ng-href="/add">Add Product</a>
+
+            <h3 class="alert alert-danger" ng-show="errorMsg">{{errorMsg}}</h3>
+            <div ng-show="!errorMsg">
+                <table id="prod-table" style="width:100%" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Active</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in listProducts" my-datatable-Directive>
+                            <!-- to set datatable after repeat finishes-->
+                            <td>{{ item.Id }}</td>
+                            <td>{{ item.Name }}</td>
+                            <td>{{ item.Type }}</td>
+                            <td>{{ item.Price.toFixed(2) }}</td>
+                            <td>{{ item.Active }}</td>
+                            <td><a class="btn btn-primary" ng-href="/edit/{{item.Id}}">Edit</a></td>
+                            <td><button type="button" class="btn btn-primary" ng-click="confirmationDialog(item.Id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="confirmation-dialog">
+        <div class="modal fade confirmation-dialog" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">{{confirmationDialogConfig.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="span5">{{confirmationDialogConfig.message}}</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" ng-click="confirmDelete(confirmationDialogConfig.prodId)" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
