@@ -1,17 +1,17 @@
 Please see below
 
 
-Download the code to local folder
+1. Download the code to local folder
 
-Navigate to CodeSample-CW-Master -> CodeSample-CW folder, open CodeSample-CW.sln file with Visual Studio
+2. Navigate to CodeSample-CW-Master -> CodeSample-CW folder, open CodeSample-CW.sln file with Visual Studio
 
-Open appsettings.json file from CodeSample-CW project, replace the ConnectionStrings with yours
+3. Open appsettings.json file from CodeSample-CW project, replace the ConnectionStrings with yours
 
-Open Package Manager Console in Visual Studio, set Default Project as "CodeSample-CW", run "update-database", which will create testing tale in your database with some seed data.
+4. Open Package Manager Console in Visual Studio, set Default Project as "CodeSample-CW", run "update-database", which will create testing tale in your database with some seed data.
 
-Set CodeSample-CW project as Startup project
+5. Set CodeSample-CW project as Startup project
 
-Press F5, project will launch. Default home page is product listing page.
+6. Press F5, project will launch. Default home page is product listing page.
 
 
 
