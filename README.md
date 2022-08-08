@@ -7,7 +7,7 @@ Please see below
 
 3. Open appsettings.json file from CodeSample-CW project, replace the ConnectionStrings with yours
 
-4. Open Package Manager Console in Visual Studio, set Default Project as "CodeSample-CW", run "update-database", which will create testing tale in your database.
+4. Open Package Manager Console in Visual Studio, set Default Project as "CodeSample-CW", run "update-database", which will create testing table in your database.
 
 5. Set CodeSample-CW project as Startup project
 
